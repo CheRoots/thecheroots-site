@@ -1,0 +1,38 @@
+# Navigate wherever you keep projects
+cd ~/Projects
+
+# 2.1 Clone the empty repo (replace USERNAME)
+git clone https://github.com/USERNAME/thecheroots-site.git
+cd thecheroots-site
+
+# 2.2 Add a README
+echo "# The Che Roots\nStatic site for https://thecheroots.in" > README.md
+
+# 2.3 Create index.html
+cat > index.html <<'HTML'
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Che Roots – Coming Soon</title>
+  <style>
+    html,body{height:100%;margin:0}
+    body{display:flex;align-items:center;justify-content:center;
+         font-family:system-ui,sans-serif;background:#111;color:#fafafa;
+         text-align:center;padding:2rem}
+    h1{font-size:clamp(2.5rem,6vw,4rem);margin:.0 0 .5em}
+    a{color:#5cc5ff;text-decoration:none}a:hover{text-decoration:underline}
+  </style>
+</head>
+<body>
+  <main>
+    <h1>🚧 The Che Roots is cooking …</h1>
+    <p>Follow our stories on
+      <a href="https://instagram.com/thecheroots"
+         target="_blank" rel="noopener">Instagram</a>
+    </p>
+  </main>
+</body>
+</html>
+HTML
